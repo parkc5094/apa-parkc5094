@@ -21,6 +21,17 @@ public class NumberSorter
 	public static int[] getSortedDigitArray(int number)
 	{
 		int[] sorted = null;
+		ArrayList<Integer> num = ArrayList<Integer> ();
+		//567891
+		int a = number,b;
+		for(int i=0; i<number.length(); i++){
+			
+			if(a%10 > 0){
+				b = a%10;
+				sorted[i] = b;
+				a=a/10
+			}
+		}
 		return sorted;
 	}
 }
