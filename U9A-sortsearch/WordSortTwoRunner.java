@@ -19,6 +19,7 @@ public class WordSortTwoRunner
 		{
 			String sentence = file.nextLine();
 			//instantiate a new WordSort
+			WordSort();
 		}
 	}
 }

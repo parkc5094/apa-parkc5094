@@ -12,7 +12,9 @@ public class NumberShifterRunner
 {
 	public static void main( String args[] ) throws IOException
 	{
+
 		//add test cases
+		ArrayList <Integer> num = new ArrayList<Integer> ();
 	}
 }
 
