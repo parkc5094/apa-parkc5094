@@ -7,5 +7,6 @@ public class OddToEvenRunner
 {
   public static void main( String args[] )
   {
+    go();
   }
 }
