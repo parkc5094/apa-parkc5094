@@ -34,6 +34,7 @@ public class SmileyFace extends Canvas
 
 		//add more code here
 
-
+	window.fillArc( 200, 50, 20,20);
+	window.fillArc( 150, 50, 20,20);
    }
 }

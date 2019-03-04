@@ -32,7 +32,10 @@ public class Shape
    {
       window.setColor(color);
       window.fillRect(xPos, yPos, width, height);
-
+	
+	window.drawOval(xPos, yPos, width, height);
+	window.drawOval(xPos +5, yPos -5; width, height);
+	window.drawRect(xPos +3, yPos -15, width, height);
       //draw whatever you want
       //    ^
       //  [ :: ]
