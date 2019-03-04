@@ -10,6 +10,11 @@ public class ListSumFirst
 {
   public static int go(List<Integer> ray)
   {
-    return 0;
+    for(int i=0; i< nums.length; i++){
+			if(nums[i] <= nums[i+1]){
+				return false;
+			}
+		}
+		return true;
   }
 }
