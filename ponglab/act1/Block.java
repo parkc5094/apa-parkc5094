@@ -21,21 +21,10 @@ public class Block implements Locatable
   }
 
   //add other Block constructors - x , y , width, height, color
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
   //add the other set methods
-   
+
 
   public void setColor(Color col)
   {
@@ -55,7 +44,7 @@ public class Block implements Locatable
 
 
   }
-   
+
   public boolean equals(Object obj)
   {
 
@@ -63,10 +52,10 @@ public class Block implements Locatable
 
 
     return false;
-  }   
+  }
 
   //add the other get methods
-    
+ 
 
   //add a toString() method  - x , y , width, height, color
 }
