@@ -16,15 +16,28 @@ public class Block implements Locatable
 
   public Block()
   {
-
+	xPos =0;
+	yPos =0;
+	width =0;
+	height =0;
 
   }
 
   //add other Block constructors - x , y , width, height, color
-
+  public Block(int x, int y, int width, int height){
+	xPos = x;
+	yPos = y;
+	this.width = width;
+	this.height = height;
+  }
 
   //add the other set methods
-
+  public setX(int x){
+	xPos =x;
+  }
+  public setY(int y){
+	yPos =y;
+  }
 
   public void setColor(Color col)
   {
