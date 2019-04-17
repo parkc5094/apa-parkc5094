@@ -43,13 +43,11 @@ public class ShapePanel extends JPanel
 
 		//instantiate a Shape
 		//tell your shape to draw
-		window.drawRect(15,15,15,15);
 
 		//instantiate a Shape
 		//tell your shape to draw
-		window.drawOval(20,50,15,10);
+
 		//instantiate a Shape
 		//tell your shape to draw
-		window.drawOval(30,60,10,10);
 	}
 }
