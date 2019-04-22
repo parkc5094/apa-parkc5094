@@ -72,7 +72,7 @@ public class PaddleTestTwo extends Canvas implements KeyListener, Runnable
       ball.setYSpeed(-ball.getYSpeed());
     }
 
-    if (keys[0] /*&& leftPaddle.getY() <=450*/)
+    if (keys[0] && leftPaddle.getY() <=450)
     {
       //move left paddle up and draw it on the window
       leftPaddle.moveUpAndDraw(window);

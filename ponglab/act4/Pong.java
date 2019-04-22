@@ -20,6 +20,10 @@ public class Pong extends Canvas implements KeyListener, Runnable
   private Paddle rightPaddle;
   private boolean[] keys;
   private BufferedImage back;
+  private String count1;
+  private static String count2;
+  public static int leftPad;
+  public static int rightPad;
 
 
   public Pong()
@@ -45,6 +49,11 @@ public class Pong extends Canvas implements KeyListener, Runnable
 	
   public void update(Graphics window){
     paint(window);
+    count1 = "Left Score: " + leftPad;
+	   count2 = "Right Score: " + rightPad;
+	   window.drawString(count1, 50, 50);
+	   window.drawString(count2, 650, 50);
+	   //ball.moveAndDraw(window);
   }
 
   public void paint(Graphics window)
@@ -107,22 +116,24 @@ public class Pong extends Canvas implements KeyListener, Runnable
       ball.setYSpeed(-ball.getYSpeed());
     }
 
-    if (keys[0] /*&& leftPaddle.getY() <=450*/)
+    if (keys[0] && leftPaddle.getY() >=10)
     {
       //move left paddle up and draw it on the window
       leftPaddle.moveUpAndDraw(window);
     }
-    if (keys[1] /*&& leftPaddle.getY() >=10*/)
+    if (keys[1] && leftPaddle.getY() <=450)
     {
       //move left paddle down and draw it on the window
-    	leftPaddle.moveDownAndDraw(window);
-
+    	//leftPaddle.moveDownAndDraw(window);
+    	leftPaddle.draw(window, Color.white);
+    	leftPaddle.setY(leftPaddle.getY() + leftPaddle.getSpeed());
+  	  	leftPaddle.draw(window, leftPaddle.getColor());
     }
-    if (keys[2]/*&& rightPaddle.getY() <=450*/)
+    if (keys[2]&& rightPaddle.getY() >=10)
     {
     	rightPaddle.moveUpAndDraw(window);
     }
-    if (keys[3]/*&& rightPaddle.getY() >=10*/)
+    if (keys[3]&& rightPaddle.getY() <=450)
     {
     	rightPaddle.moveDownAndDraw(window);
     }
