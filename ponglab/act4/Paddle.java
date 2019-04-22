@@ -63,7 +63,7 @@ public class Paddle extends Block
     setY(getY() + ySpeed);
 	   */
 
-	  draw(window, Color.WHITE);
+	  draw(window, Color.white);
 	  //window.setColor(Color.GREEN);
 	 // window.fillRect(getX(), getY(), getWidth(), getHeight());
 	  setY(getY() - getSpeed());
@@ -77,9 +77,9 @@ public class Paddle extends Block
 	  //setY(getY() + speed);
 	  //draw(window, Color.BLU);
 	  
-	  draw(window, Color.WHITE);
+	  draw(window, Color.white);
 	  setY(getY() + speed);
-	  draw(window, Color.BLUE);
+	  draw(window, super.getColor());
   }
 
   //add get methods
