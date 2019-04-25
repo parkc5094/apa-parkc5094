@@ -48,7 +48,7 @@ public class Pong extends Canvas implements KeyListener, Runnable
   }
 	
   public void update(Graphics window){
-    paint(window);
+	  paint(window);
     count1 = "Left Score: " + leftPad;
 	   count2 = "Right Score: " + rightPad;
 	   window.drawString(count1, 50, 50);
@@ -70,11 +70,9 @@ public class Pong extends Canvas implements KeyListener, Runnable
     //we will draw all changes on the background image
     Graphics graphToBack = back.createGraphics();
 
-
     ball.moveAndDraw(graphToBack);
     leftPaddle.draw(graphToBack);
     rightPaddle.draw(graphToBack);
-
 
     //see if ball hits left wall or right wall
     if(!(ball.getX()>=10 && ball.getX()<=780))
@@ -154,12 +152,6 @@ public class Pong extends Canvas implements KeyListener, Runnable
 
 
 
-
-
-
-
-
-
 		
     twoDGraph.drawImage(back, null, 0, 0);
   }
@@ -194,8 +186,8 @@ public class Pong extends Canvas implements KeyListener, Runnable
     {
       while(true)
       {
-	Thread.currentThread().sleep(8);
-	repaint();
+    		Thread.currentThread().sleep(8);
+    		repaint();
       }
     }catch(Exception e)
     {
