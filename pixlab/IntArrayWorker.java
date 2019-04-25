@@ -112,16 +112,16 @@ public class IntArrayWorker
   }
   
   public int getLargest() {
-	  int largest = matrix[0][0];
+	  int larg = matrix[0][0];
 	    for (int[] rowArray : matrix)
 	    {
 	      for (int item : rowArray)
 	      {
-	        if(item > largest)
-	        	largest = item;
+	        if(item > larg)
+	        	larg = item;
 	      }
 	    }
-	   return largest;
+	  return larg;
 	  
   }
   

@@ -93,7 +93,7 @@ public class IntArrayWorkerTester
   
   public static void main(String[] args)
   {
-    testSetMatrix();
+    testSetMatrix();//hihi
     testFillPattern1();
     testGetCount(); 
     testGetTotal();
