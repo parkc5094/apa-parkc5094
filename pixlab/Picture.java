@@ -233,35 +233,59 @@ public class Picture extends SimplePicture
   public void Grayscale()
   {
     Pixel[][] pixels = this.getPixels2D();
-    int redT =0, greenT=0, blueT =0;
+    grayscaleAverage();
+    grayscaleLightness();
+    grayscaleLuminosity();
+    
+  }
+  public void grayscaleAverage()
+  {
+    Pixel[][] pixels = this.getPixels2D();
     for (Pixel[] rowArray : pixels)
     {
       for (Pixel pixelObj : rowArray)
       {
-        redT = pixelObj.getRed();
-        greenT = pixelObj.getGreen();
-        blueT = pixelObj.getBlue();
-        int T = (redT + greenT + blueT)/3;
-        pixelObj.setRed(T);
-        pixelObj.setGreen(T);
-        pixelObj.setBlue(T);
+    	  pixelObj.setGrayAverage();
       }
     }
   }
+  public void grayscaleLuminosity()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+    	  pixelObj.setGrayLuminosity();
+      }
+    }
+  }
+  public void grayscaleLightness()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    {
+      for (Pixel pixelObj : rowArray)
+      {
+    	  pixelObj.setGrayLightness();
+      }
+    }
+  }
+  
   public void fixUnderwater()
   {
     Pixel[][] pixels = this.getPixels2D();
     //int redT =0, greenT=0, blueT =0;
+    
     for (Pixel[] rowArray : pixels)
     {
       for (Pixel pixelObj : rowArray)
       {
-    	  if(pixelObj.getBlue() > 200) {
-    		  pixelObj.setRed(pixelObj.getRed()+100);
+    		  pixelObj.setRed(pixelObj.getRed()*4);
     		  //pixelObj.setGreen(pixelObj.getGreen() + 20);
-    	  }
       }
     }
+    
   }
   
   /* Main method for testing - each class in Java can have a main 

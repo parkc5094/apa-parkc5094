@@ -1,5 +1,5 @@
 import java.awt.Color;
-
+import java.util.*;
 /**
  * Class that references a pixel in a picture. Pixel 
  * stands for picture element where picture is 
@@ -352,6 +352,23 @@ public class Pixel
    return average;
  }
   
+ public void setGrayAverage() {
+		// set the green value to the corrected value
+	    //int green = correctValue(value);
+	 	int avg = (int)getAverage();
+	    
+	    // update the pixel value in the picture
+	    updatePicture(getAlpha(), avg, avg, avg);
+ }
+ public void setGrayLightness() {
+	 	int h = (Math.max(getRed(), Math.max(getGreen(), getBlue())) + Math.min(getRed(), Math.min(getGreen(), getBlue()))) / 2;
+	 	updatePicture(getAlpha(), h,h,h);
+ }
+ public void setGrayLuminosity() {
+ 		int p =(int)(0.21* getRed() + 0.72 *getGreen()+ 0.07* getBlue());
+	 	updatePicture(getAlpha(), p ,p,p);
+ }
+ 
   /**
    * Method to return a string with information about this pixel
    * @return a string with information about this pixel

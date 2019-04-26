@@ -59,7 +59,11 @@ public class PictureTester
   public static void testGrayscale() {
 	  Picture beach2 = new Picture("beach.jpg");
 	  beach2.explore();
-	  beach2.Grayscale();
+	  beach2.grayscaleAverage();
+	  beach2.explore();
+	  beach2.grayscaleLuminosity();
+	  beach2.explore();
+	  beach2.grayscaleLightness();
 	  beach2.explore();
   }
   public static void testFixUnderwater() {
@@ -68,6 +72,19 @@ public class PictureTester
 	  water.fixUnderwater();
 	  water.explore();
   }
+  /*
+  public static void testluminGrayscale() {
+	  Picture beach2 = new Picture("beach.jpg");
+	  beach2.explore();
+	  beach2.luminGrayscale();
+	  beach2.explore();
+  }
+  public static void testLightGrayscale() {
+	  Picture beach2 = new Picture("beach.jpg");
+	  beach2.explore();
+	  beach2.LightGrayscale();
+	  beach2.explore();
+  }*/
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -81,8 +98,10 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    //testGrayscale();
-    testFixUnderwater();
+    testGrayscale();
+    //testluminGrayscale();
+    //testLightGrayscale();
+    //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
