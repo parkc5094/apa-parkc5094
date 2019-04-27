@@ -118,7 +118,71 @@ public class Picture extends SimplePicture
       }
     } 
   }
-  
+  public void mirrorVerticalRightToLeft()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = width/2; col < width; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][width - 1 - col];
+        rightPixel.setColor(leftPixel.getColor());
+      }
+    } 
+  }
+  public void mirrorHorizontal()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel bottPixel = null;
+    int height = pixels.length;
+    for (int col = 0; col < pixels[0].length; col++)
+    {
+      for (int row = 0; row < height / 2; row++)
+      {
+        topPixel = pixels[row][col];
+        bottPixel = pixels[height-1-row][col];
+        bottPixel.setColor(topPixel.getColor());
+      }
+    }
+  }
+  public void mirrorHorizontalBotToTop()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel bottPixel = null;
+    int height = pixels.length;
+    for (int col = 0; col < pixels[0].length; col++)
+    {
+      for (int row = height/2; row < height; row++)
+      {
+        topPixel = pixels[row][col];
+        bottPixel = pixels[height-1-row][col];
+        bottPixel.setColor(topPixel.getColor());
+      }
+    }
+  }
+  public void mirrorDiagonal()
+  {
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  int width = pixels[0].length;
+	  
+	  for (int row = 0; row < pixels.length; row++){
+	      for (int col = 0; col < width; col++){
+	    	 if(col<pixels.length) { 
+	    	  leftPixel = pixels[row][col];
+	    	  rightPixel = pixels[col][row];
+	    	  leftPixel.setColor(rightPixel.getColor());
+	    	 }
+	    }
+	 } 
+  }
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
   {
@@ -175,7 +239,7 @@ public class Picture extends SimplePicture
   }
 
   /** Method to create a collage of several pictures */
-  public void createCollage()
+  public void creatieCollage()
   {
     Picture flower1 = new Picture("flower1.jpg");
     Picture flower2 = new Picture("flower2.jpg");
@@ -234,8 +298,8 @@ public class Picture extends SimplePicture
   {
     Pixel[][] pixels = this.getPixels2D();
     grayscaleAverage();
-    grayscaleLightness();
-    grayscaleLuminosity();
+    //grayscaleLightness();
+    //grayscaleLuminosity();
     
   }
   public void grayscaleAverage()
