@@ -506,6 +506,42 @@ public class Picture extends SimplePicture
     
   }
   
+  public void blur(int x, int y, int w, int h) {
+	  Pixel thisPixel = null;
+	  Pixel topPixel = null;
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+	  Pixel bottPixel = null;
+	  
+	  Pixel[][] pixels = this.getPixels2D();
+	  
+	  for (int row = x; row < x+w; row++)
+	    {
+	      // loop from 13 to just before the mirror point
+	      for (int col = y; col < y + h; col++)
+	      {
+	        /*
+	        leftPixel = pixels[row][col];      
+	        rightPixel = pixels[row]                       
+	                         [mirrorPoint - col + mirrorPoint];
+	        rightPixel.setColor(leftPixel.getColor());
+	        count++;*/
+	    	  
+	    	thisPixel = pixels[row][col];
+	    	rightPixel = pixels[row][col+1];
+	    	leftPixel = pixels[row][col-1];
+	    	topPixel = pixels[row+1][col];
+	    	bottPixel = pixels[row-1][col];
+	    	int blurredR = (int)((rightPixel.getRed() + leftPixel.getRed() + topPixel.getRed() + bottPixel.getRed())/4);
+	    	int blurredB = (int)((rightPixel.getBlue() + leftPixel.getBlue() + topPixel.getBlue() + bottPixel.getBlue())/4);
+	    	int blurredG = (int)((rightPixel.getGreen() + leftPixel.getGreen() + topPixel.getGreen() + bottPixel.getGreen())/4);
+	    	 Color blur = new Color(blurredR, blurredB, blurredG);
+	    	
+	    	thisPixel.setColor(blur);
+	      }
+	    }
+  }
+  
   /* Main method for testing - each class in Java can have a main 
    * method 
    */

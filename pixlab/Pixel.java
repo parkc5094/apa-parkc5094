@@ -360,6 +360,7 @@ public class Pixel
 	    // update the pixel value in the picture
 	    updatePicture(getAlpha(), avg, avg, avg);
  }
+ 
  public void setGrayLightness() {
 	 	int h = (Math.max(getRed(), Math.max(getGreen(), getBlue())) + Math.min(getRed(), Math.min(getGreen(), getBlue()))) / 2;
 	 	updatePicture(getAlpha(), h,h,h);

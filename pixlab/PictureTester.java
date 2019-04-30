@@ -145,6 +145,15 @@ public class PictureTester
 	  water.fixUnderwater();
 	  water.explore();
   }
+  public static void testBlur(int x, int y, int w, int h, int n) {
+	  Picture redMoto = new Picture("redMotorcycle.jpg");
+	  redMoto.explore();
+	  
+	  for(int i=0; i< n; i++) {
+		  redMoto.blur(x,y,w,h);  
+	  }
+	  redMoto.explore();
+  }
   /*
   public static void testluminGrayscale() {
 	  Picture beach2 = new Picture("beach.jpg");
@@ -166,11 +175,12 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
+  /*
     testGrayscale();
     testFixUnderwater();
     testMirrorVertical();
@@ -187,6 +197,9 @@ public class PictureTester
 	testMyCollage();
     testEdgeDetection();
     testEdgeDetection2();
+    
+  */
+    testBlur(180,160,25,25,10);
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
