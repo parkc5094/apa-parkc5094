@@ -46,7 +46,7 @@ public class AlienHorde
 	  
 	  for (Alien a : aliens) {
 		  
-		  if (right && (a.getX() <= 800)) {
+		  if (right && (a.getX() <= 750)) {
 			  a.move("RIGHT");
 		  }
 		  else if (!right && (a.getX() <= 0)) {
@@ -57,6 +57,7 @@ public class AlienHorde
 			  right = false;
 			  a.move("LEFT");
 		  }
+		  
 		  
 		  
 		  

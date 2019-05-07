@@ -24,7 +24,21 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
   private Alien alienFour;
   private Alien alienFive;
   private Alien alienSix;
-  private Alien alienSeven;
+  //private Alien alienSeven;
+  
+  private Alien a1;
+  private Alien a2;
+  
+  private Alien a3;
+  private Alien a4;
+  private Alien a5;
+  private Alien a6;
+  private Alien a7;
+  
+  private Alien a8;
+  private Alien a9;
+  private Alien a10;
+  private Alien a11;
   
   private Ammo am;
   
@@ -60,7 +74,23 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     alienFour = new Alien(150, 0,30,30,1);
     alienFive = new Alien(200, 0,30,30,1);
     alienSix = new Alien(250, 0,30,30,1);
-    alienSeven = new Alien(300, 0,30,30,1);
+    //alienSeven = new Alien(300, 0,30,30,1);
+    
+    
+    a1 = new Alien(0,50,30,30,1);
+    a2 = new Alien(50,50,30,30,1);
+    
+    a3 = new Alien(100, 50,30,30,1);
+    a4 = new Alien(150, 50,30,30,1);
+    a5 = new Alien(200, 50,30,30,1);
+    a6 = new Alien(250, 100,30,30,1);
+    a7 = new Alien(300, 100,30,30,1);
+    
+    a8 = new Alien(0, 100,30,30,1);
+    a9 = new Alien(50, 100,30,30,1);
+    a10 = new Alien(250, 50,30,30,1);
+    a11 = new Alien(300, 50,30,30,1);
+    
     
     horde = new AlienHorde(10);
     shots =  new Bullets();
@@ -70,13 +100,24 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     
     horde.add(alienOne);
     horde.add(alienTwo);
-    
     horde.add(alienThree);
     horde.add(alienFour);
     horde.add(alienFive);
     horde.add(alienSix);
-    horde.add(alienSeven);
+    //horde.add(alienSeven);
     
+    horde.add(a1);
+    horde.add(a2);
+    horde.add(a3);
+    horde.add(a4);
+    horde.add(a5);
+    horde.add(a6);
+    horde.add(a7);
+    
+    horde.add(a8);
+    horde.add(a9);
+    horde.add(a10);
+    horde.add(a11);
     
     this.addKeyListener(this);
     new Thread(this).start();
@@ -177,6 +218,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     shots.drawEmAll(graphToBack);
     shots.moveEmAll();
 
+    shots.cleanEmUp();
     
     //alienOne.move("RIGHT");
     //alienTwo.move("LEFT");
