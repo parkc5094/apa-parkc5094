@@ -13,30 +13,52 @@ public abstract class Card
   private int face;
 
   //constructors
-
+  
+  Card(){
+	  face = 0;
+	  suit = "";
+  }
+  
+  Card(int a, String b){
+	  face =a;
+	  suit =b;
+  }
 
 
   // modifiers
+  public abstract int getValue();
+  public void setFace(int a) {
+	  face =a;
+  }
+  
+ public void setSuit(String b) {
+	  
+	  suit = b;
+  }
 
-
- 
 
   //accessors
 
 
+  public int getFace() {
+	  return face;
+  }
 
-
+  public String getSuit() {
+	  return suit;
+  }
 
   public abstract int getValue();
 
   public boolean equals(Object obj)
   {
-
-
-
-    return false;
+	  Card hi = (Card) obj;
+	  return (getSuit().equals(hi.getSuit()) && getFace() == hi.getFace());
   }
 
   //toString
+  public String toString() {
+	  return FACES[getFace()] + " of " + getSuit() + " | value = " + getValue();
+  }
         
 }

@@ -9,15 +9,16 @@ import java.util.Scanner;
 
 
 //define Player class here 
+public Player() {
+	
+	//constructors
+
+	
 
 
 
+	//hit method goes here
+	
+}
 
-//constructors
-
-
-
-
-
-//hit method goes here
 

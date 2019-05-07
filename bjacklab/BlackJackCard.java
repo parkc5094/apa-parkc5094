@@ -6,7 +6,13 @@
 public class BlackJackCard extends Card
 {
   //constructors
-
+	public BlackJackCard() {
+		super();
+	}
+	
+	public BlackJackCard(int face, String suit) {
+		super(face, suit);
+	}
 
 
   public int getValue()
@@ -15,7 +21,17 @@ public class BlackJackCard extends Card
     //this makes writing the whole program a little easier
 
 
-    return 0;
+    //return getFace();
+	  
+	if(getFace() ==1) {
+		return 11;
+	}
+	else if(getFace() ==11 || getFace() ==12 || getFace() == 13) {
+		return 10;
+	}
+	else {
+		return getFace();
+	}
   }
         
 }
