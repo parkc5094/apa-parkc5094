@@ -66,7 +66,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     
     ship = new Ship();
     
-    
+    /*
     alienOne = new Alien(0,0,30,30,1);
     alienTwo = new Alien(50,0,30,30,1);
     
@@ -74,6 +74,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     alienFour = new Alien(150, 0,30,30,1);
     alienFive = new Alien(200, 0,30,30,1);
     alienSix = new Alien(250, 0,30,30,1);
+    */
     //alienSeven = new Alien(300, 0,30,30,1);
     
     
@@ -92,18 +93,20 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     a11 = new Alien(300, 50,30,30,1);
     
     
-    horde = new AlienHorde(10);
+    horde = new AlienHorde();
     shots =  new Bullets();
     am = new Ammo();
     
     shots.add(am);
     
+    /*
     horde.add(alienOne);
     horde.add(alienTwo);
     horde.add(alienThree);
     horde.add(alienFour);
     horde.add(alienFive);
     horde.add(alienSix);
+    */
     //horde.add(alienSeven);
     
     horde.add(a1);
@@ -118,6 +121,7 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     horde.add(a9);
     horde.add(a10);
     horde.add(a11);
+    
     
     this.addKeyListener(this);
     new Thread(this).start();

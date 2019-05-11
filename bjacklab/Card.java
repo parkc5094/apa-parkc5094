@@ -48,8 +48,6 @@ public abstract class Card
 	  return suit;
   }
 
-  public abstract int getValue();
-
   public boolean equals(Object obj)
   {
 	  Card hi = (Card) obj;

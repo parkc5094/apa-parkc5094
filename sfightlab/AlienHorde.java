@@ -19,9 +19,9 @@ public class AlienHorde
 	
   //private Image image;
 
-  public AlienHorde(int size)
+  public AlienHorde()
   {
-	  aliens = new ArrayList <Alien>(size);
+	  aliens = new ArrayList <Alien>();
   }
   
   public int getSize()
@@ -45,31 +45,31 @@ public class AlienHorde
   {
 	  
 	  for (Alien a : aliens) {
-		  
+
 		  if (right && (a.getX() <= 750)) {
 			  a.move("RIGHT");
 		  }
+		  
 		  else if (!right && (a.getX() <= 0)) {
-			  right = true;
-			  a.move("RIGHT");
+				  if (!right)
+					  down = true;
+				  right = true;
+				  a.move("RIGHT");
 		  }
 		  else {
+			  if (right)
+				  down = true;
 			  right = false;
 			  a.move("LEFT");
 		  }
-		  
-		  
-		  
-		  
+	  }
+	  if (down) {
+		  for (Alien a : aliens)
+			  a.setY(a.getY()+20);
+		  down = false;
 	  }
 	  
-	  
-	  
-			
-
-	  
   }
-	  
 	  
 
   public void removeDeadOnes(List<Ammo> shots)

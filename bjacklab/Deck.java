@@ -33,7 +33,7 @@ public class Deck
 		  }
 	  }
 	  
-	  System.out.println(stackOfCards);
+	  //System.out.println(stackOfCards);
     //loop through suits
     //loop through faces
     //add in a new card
