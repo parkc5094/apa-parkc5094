@@ -72,7 +72,7 @@ public class Ammo extends MovingThing
 
   public boolean didCollide(Alien al) {
 	  
-	  if(getX() < al.getX() +10 &&getX() > al.getX() -10 && getY() == al.getY()) {
+	  if(getX() < al.getX() +15 &&getX() > al.getX() -15 && getY() == al.getY()) {
 	    	//graphToBack.setColor(Color.BLACK);
 	    	//graphToBack.fillRect(alienOne.getX(), alienOne.getY(), alienOne.getWidth(), alienOne.getHeight());
 	    	kill();

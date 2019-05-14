@@ -17,13 +17,6 @@ import java.util.ArrayList;
 public class OuterSpace extends Canvas implements KeyListener, Runnable
 {
   private Ship ship;
-  private Alien alienOne;
-  private Alien alienTwo;
-  
-  private Alien alienThree;
-  private Alien alienFour;
-  private Alien alienFive;
-  private Alien alienSix;
   //private Alien alienSeven;
   
   private Alien a1;
@@ -66,17 +59,6 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     
     ship = new Ship();
     
-    /*
-    alienOne = new Alien(0,0,30,30,1);
-    alienTwo = new Alien(50,0,30,30,1);
-    
-    alienThree = new Alien(100, 0,30,30,1);
-    alienFour = new Alien(150, 0,30,30,1);
-    alienFive = new Alien(200, 0,30,30,1);
-    alienSix = new Alien(250, 0,30,30,1);
-    */
-    //alienSeven = new Alien(300, 0,30,30,1);
-    
     
     a1 = new Alien(0,50,30,30,1);
     a2 = new Alien(50,50,30,30,1);
@@ -99,15 +81,6 @@ public class OuterSpace extends Canvas implements KeyListener, Runnable
     
     shots.add(am);
     
-    /*
-    horde.add(alienOne);
-    horde.add(alienTwo);
-    horde.add(alienThree);
-    horde.add(alienFour);
-    horde.add(alienFive);
-    horde.add(alienSix);
-    */
-    //horde.add(alienSeven);
     
     horde.add(a1);
     horde.add(a2);
