@@ -78,8 +78,10 @@ public class BlackJack
         	
     			out.println("P"+(i+1)+": Current hand " + players.get(i).toString());
         	
-    			System.out.print("Do you want to be hit? [Y/N] ");
-    			choice = keyboard.next();
+    			if(players.get(i).getHandValue() <21) {
+    				System.out.print("Do you want to be hit? [Y/N] ");
+    				choice = keyboard.next();
+    			}
     		}
     		System.out.println("\n");
         }
@@ -123,13 +125,15 @@ public class BlackJack
         		max = i;
         	}
         	
-        	
+        	/*
         	if(i== players.size()-1&&players.get(i).getHandValue()>21) {
         		System.out.println("Dealer busted!");
         	}
         	else if(players.get(i).getHandValue()>21) {
         		System.out.println("Player " + (i+1) + " busted!");
         	}
+        	*/
+        	
         }
         
         if(max == players.size()-1) {
@@ -148,6 +152,15 @@ public class BlackJack
     		}
    
     	}
+        
+        for(int i=0; i< players.size();i++) {
+        	if(i== players.size()-1&&players.get(i).getHandValue()>21) {
+        		System.out.println("Dealer busted!");
+        	}
+        	else if(players.get(i).getHandValue()>21) {
+        		System.out.println("Player " + (i+1) + " busted!");
+        	}
+        }
         
         System.out.println();
         
